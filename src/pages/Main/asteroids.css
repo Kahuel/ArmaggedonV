@@ -1,0 +1,113 @@
+.asteroidInList {
+  background: linear-gradient(90deg, #cff37d 0%, #7de88c 100%);
+  border: 0.1em solid #000000;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+  position: relative;
+  box-sizing: content-box;
+  width: 75vw;
+  height: 230px;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.asteroidInList.dangerous {
+  background: linear-gradient(90deg, #ffb199 0%, #ff0844 100%);
+}
+
+.asteroidsList {
+  height: 80vh;
+  overflow: auto;
+}
+
+.asteroidImg {
+  height: 100%;
+  width: 100%;
+}
+
+.asteroidImgContainer {
+  height: 200px;
+  width: 300px;
+  margin-left: 10px;
+  margin-right: 1px;
+}
+
+.dinoContainer {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.infoContainer {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.destruction_button {
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 16px;
+  height: 50px;
+  position: absolute;
+  bottom: 80px;
+  right: 10px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: #186dd6;
+  border-radius: 24px;
+}
+
+.destruction_button:active {
+  border: solid black;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.048);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+
+.modal.active {
+  transform: scale(1);
+}
+
+.modal_content {
+  background-color: white;
+}
+@media (max-width: 500px) {
+  .asteroidInList {
+    height: 300px;
+  }
+
+  .asteroidImg {
+    height: 70%;
+    width: 70%;
+  }
+
+  .asteroidImgContainer {
+    margin-left: 1px;
+  }
+
+  .destruction_button {
+    bottom: 10px;
+  }
+}

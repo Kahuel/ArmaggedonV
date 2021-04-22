@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Destruction, Asteroids } from "pages";
+import {
+  Link,
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <Router>
+      <div className="title">
+        <h1>ARMAGGEDON V</h1>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Сервис мониторинга и уничтожения астероидов, опасно подлетающих к
+          Земле.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <div>
+          <Link to="/main">
+            <a>Астероиды</a>
+          </Link>
+          <Link to="/destruction">
+            <a>Уничтожение</a>
+          </Link>
+        </div>
+        <hr />
+      </div>
+      <Switch>
+        <Route exact path="/">
+          <Redirect to="/main" />
+        </Route>
+        <Route path="/main">
+          <Asteroids />
+        </Route>
+        <Route path="/destruction">
+          <Destruction />
+        </Route>
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
