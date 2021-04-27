@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { Link, Route, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getAsteroidInfo } from "api/api";
 import { Asteroid, CloseApproach } from "types/types";
-import { asteroidActions } from "store/actions";
 
 export const Info: React.FC = () => {
-  const dispatch = useDispatch();
   const [asteroid, setAsteroid] = useState<Asteroid>();
   const { id } = useParams<{ id: string }>();
   useEffect(() => {
