@@ -34,8 +34,6 @@ export const Asteroids: React.FC = () => {
     updateList();
   }
 
-  console.log(list);
-
   return (
     <div onScroll={handleScroll} className="asteroidsList">
       {list.map((el: Asteroid) => (
