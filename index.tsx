@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./src/App";
 import { combineReducers, createStore } from "redux";
 import { Provider } from "react-redux";
-import { reducers } from "store/reducers";
+import { reducers } from "./src/store/reducers";
 import dayjs from "dayjs";
-import { getAsteroids } from "api/api";
+import { getAsteroids } from "./src/api/api";
 
 const store = createStore(reducers);
 
