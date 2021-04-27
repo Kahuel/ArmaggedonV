@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { AsteroidCreator } from "./AsteroidCreator";
 import { asteroidActions, dateActions } from "store/actions";
@@ -33,6 +33,8 @@ export const Asteroids: React.FC = () => {
   if (list.length === 0) {
     updateList();
   }
+
+  console.log(list);
 
   return (
     <div onScroll={handleScroll} className="asteroidsList">

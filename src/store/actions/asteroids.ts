@@ -1,4 +1,4 @@
-import { Asteroid } from "types/types";
+import { Asteroid, CloseApproach } from "types/types";
 
 export const addAsteroidToDestructionList = (asteroid: Asteroid) => {
   return {
@@ -18,5 +18,15 @@ export const updateAsteroidList = (newAsteroids: Asteroid[]) => {
   return {
     type: "UPDATE_ASTEROID_LIST",
     payload: { newAsteroids },
+  };
+};
+
+export const updateApproachData = (
+  closeApproachData: CloseApproach[],
+  id: string
+) => {
+  return {
+    type: "UPDATE_CLOSE_APPROACH_DATA",
+    payload: { closeApproachData, id },
   };
 };

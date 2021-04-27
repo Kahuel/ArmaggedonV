@@ -7,3 +7,11 @@ export const getAsteroids = async (date: string) => {
   });
   return response;
 };
+
+export const getAsteroidInfo = async (id: string) => {
+  const response = await axios({
+    method: "GET",
+    url: `http://www.neowsapp.com/rest/v1/neo/${id}?api_key=T2On9LH3qcCSunNBko6Sr7MIgiN0zdNiBWWGUajA`,
+  });
+  return response;
+};

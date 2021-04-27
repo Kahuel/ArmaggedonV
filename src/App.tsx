@@ -1,5 +1,5 @@
-import React from "react";
-import { Destruction, Asteroids } from "pages";
+import React, { useState } from "react";
+import { Destruction, Asteroids, Modal, Info } from "pages";
 import {
   Link,
   BrowserRouter as Router,
@@ -31,11 +31,14 @@ const App = () => {
         <Route exact path="/">
           <Redirect to="/main" />
         </Route>
-        <Route path="/main">
+        <Route exact path="/main">
           <Asteroids />
         </Route>
         <Route path="/destruction">
           <Destruction />
+        </Route>
+        <Route path="/main/:id">
+          <Info />
         </Route>
       </Switch>
     </Router>

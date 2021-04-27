@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Asteroid } from "types/types";
 import "./asteroids.css";
 import dayjs from "dayjs";
 import { Dino, AsteroidImg } from "assets/img";
-import { DispatchProp, useDispatch } from "react-redux";
-import { asteroidActions } from "store/actions";
+import { Link, useHistory } from "react-router-dom";
+import { getAsteroidInfo } from "api/api";
 
 interface Props {
   el: Asteroid;
-  f?: (el: Asteroid) => void;
+  f: (el: Asteroid) => void;
 }
 
 const createViewBox = (size: number) => {
@@ -25,7 +25,7 @@ const createViewBox = (size: number) => {
 };
 
 export const AsteroidCreator: React.FC<Props> = ({ el, f }) => {
-  const dispatch = useDispatch();
+  const history = useHistory();
 
   const className = `asteroidInList ${
     el.is_potentially_hazardous_asteroid ? "dangerous" : ""
@@ -49,7 +49,13 @@ export const AsteroidCreator: React.FC<Props> = ({ el, f }) => {
   const path = window.location.pathname;
 
   return (
-    <div key={el.id} className={className} onClick={() => {}}>
+    <div
+      key={el.id}
+      className={className}
+      onClick={() => {
+        history.push(`/main/${el.id}`);
+      }}
+    >
       <div className={`dinoContainer`}>
         <Dino className={`dino`} />
       </div>
@@ -71,6 +77,7 @@ export const AsteroidCreator: React.FC<Props> = ({ el, f }) => {
         className={`destruction_button`}
         onClick={(e) => {
           e.stopPropagation();
+          e.preventDefault();
           if (f) {
             f(el);
           }

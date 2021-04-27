@@ -1,3 +1,21 @@
+export interface CloseApproach {
+  close_approach_date: string;
+  close_approach_date_full: string;
+  epoch_date_close_approach: number;
+  relative_velocity: {
+    kilometers_per_second: string;
+    kilometers_per_hour: string;
+    miles_per_hour: string;
+  };
+  miss_distance: {
+    astronomical: string;
+    lunar: string;
+    kilometers: string;
+    miles: string;
+  };
+  orbiting_body: string;
+}
+
 export interface Asteroid {
   links: {
     self: string;
@@ -26,25 +44,7 @@ export interface Asteroid {
     };
   };
   is_potentially_hazardous_asteroid: boolean;
-  close_approach_data: [
-    {
-      close_approach_date: string;
-      close_approach_date_full: string;
-      epoch_date_close_approach: number;
-      relative_velocity: {
-        kilometers_per_second: string;
-        kilometers_per_hour: string;
-        miles_per_hour: string;
-      };
-      miss_distance: {
-        astronomical: string;
-        lunar: string;
-        kilometers: string;
-        miles: string;
-      };
-      orbiting_body: string;
-    }
-  ];
+  close_approach_data: CloseApproach[];
   is_sentry_object: boolean;
 }
 
