@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Destruction, Asteroids, Modal, Info } from "pages";
+import { Destruction, Asteroids, Info } from "pages";
 import {
   Link,
   BrowserRouter as Router,

@@ -10,12 +10,16 @@ export const Asteroids: React.FC = () => {
   const dispatch = useDispatch();
   const list = useSelector((store: any) => store.asteroidList);
   const date = useSelector((store: any) => store.date);
+  console.log(list);
 
   const updateList = async () => {
     const formatedDate = date.format("YYYY-MM-DD");
     const response = await getAsteroids(formatedDate);
     const newList = response.data.near_earth_objects[formatedDate];
-    dispatch(asteroidActions.updateAsteroidList(newList));
+    console.log(response.data);
+    if (newList) {
+      dispatch(asteroidActions.updateAsteroidList(newList));
+    }
     dispatch(dateActions.nextDay(date.add(1, "day")));
   };
 
