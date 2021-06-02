@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Asteroid } from "types/types";
 import "./asteroids.css";
 import dayjs from "dayjs";
 import { Dino, AsteroidImg } from "assets/img";
-import { Link, useHistory } from "react-router-dom";
-import { getAsteroidInfo } from "api/api";
+import { useHistory } from "react-router-dom";
 
 interface Props {
   el: Asteroid;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Destruction, Asteroids, Info } from "pages";
 import {
   Link,
@@ -19,10 +19,10 @@ const App = () => {
         </p>
         <div>
           <Link to="/main">
-            <a>Астероиды</a>
+            <button>Астероиды</button>
           </Link>
           <Link to="/destruction">
-            <a>Уничтожение</a>
+            <button>Уничтожение</button>
           </Link>
         </div>
         <hr />
