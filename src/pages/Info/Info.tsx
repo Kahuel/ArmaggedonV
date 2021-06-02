@@ -12,7 +12,7 @@ export const Info: React.FC = () => {
       setAsteroid(response.data);
     };
     asteroidInfo();
-  }, [id]);
+  }, []);
 
   if (!asteroid) {
     return <div>Loading...</div>;
