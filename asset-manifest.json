@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/armaggedonv/static/css/main.cc5b5b00.chunk.css",
+    "main.js": "/armaggedonv/static/js/main.55241654.chunk.js",
+    "main.js.map": "/armaggedonv/static/js/main.55241654.chunk.js.map",
+    "runtime-main.js": "/armaggedonv/static/js/runtime-main.d380d47b.js",
+    "runtime-main.js.map": "/armaggedonv/static/js/runtime-main.d380d47b.js.map",
+    "static/js/2.30214c5f.chunk.js": "/armaggedonv/static/js/2.30214c5f.chunk.js",
+    "static/js/2.30214c5f.chunk.js.map": "/armaggedonv/static/js/2.30214c5f.chunk.js.map",
+    "index.html": "/armaggedonv/index.html",
+    "static/css/main.cc5b5b00.chunk.css.map": "/armaggedonv/static/css/main.cc5b5b00.chunk.css.map",
+    "static/js/2.30214c5f.chunk.js.LICENSE.txt": "/armaggedonv/static/js/2.30214c5f.chunk.js.LICENSE.txt",
+    "static/media/asteroid.7f39dfbb.svg": "/armaggedonv/static/media/asteroid.7f39dfbb.svg",
+    "static/media/dino.2faf6d60.svg": "/armaggedonv/static/media/dino.2faf6d60.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d380d47b.js",
+    "static/js/2.30214c5f.chunk.js",
+    "static/css/main.cc5b5b00.chunk.css",
+    "static/js/main.55241654.chunk.js"
+  ]
+}
