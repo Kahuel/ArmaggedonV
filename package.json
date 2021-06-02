@@ -1,7 +1,7 @@
 {
-  "homepage": "https://Kahuel.github.io/armaggedonv/",
   "name": "armaggedonv",
   "version": "0.1.0",
+  "homepage": "https://Kahuel.github.io/armaggedonv/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
