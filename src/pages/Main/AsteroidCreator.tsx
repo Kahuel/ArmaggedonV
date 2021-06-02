@@ -82,7 +82,7 @@ export const AsteroidCreator: React.FC<Props> = ({ el, f }) => {
           }
         }}
       >
-        {path === "/main" ? "На уничтожение" : "Удалить"}
+        {path === "/armaggedonv/main" ? "На уничтожение" : "Удалить"}
       </button>
     </div>
   );
