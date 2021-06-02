@@ -52,7 +52,7 @@ export const AsteroidCreator: React.FC<Props> = ({ el, f }) => {
       key={el.id}
       className={className}
       onClick={() => {
-        history.push(`/main/${el.id}`);
+        history.push(`/armaggedonv/main/${el.id}`);
       }}
     >
       <div className={`dinoContainer`}>

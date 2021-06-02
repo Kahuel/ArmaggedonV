@@ -18,26 +18,26 @@ const App = () => {
           Земле.
         </p>
         <div>
-          <Link to="/main">
+          <Link to="/armaggedonv/main">
             <button>Астероиды</button>
           </Link>
-          <Link to="/destruction">
+          <Link to="/armaggedonv/destruction">
             <button>Уничтожение</button>
           </Link>
         </div>
         <hr />
       </div>
       <Switch>
-        <Route exact path="/">
-          <Redirect to="/main" />
+        <Route exact path="/armaggedonv">
+          <Redirect to="/armaggedonv/main" />
         </Route>
-        <Route exact path="/main">
+        <Route exact path="/armaggedonv/main">
           <Asteroids />
         </Route>
-        <Route path="/destruction">
+        <Route path="/armaggedonv/destruction">
           <Destruction />
         </Route>
-        <Route path="/main/:id">
+        <Route path="/armaggedonv/main/:id">
           <Info />
         </Route>
       </Switch>
